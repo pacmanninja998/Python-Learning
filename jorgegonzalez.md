@@ -11,7 +11,6 @@ A list of projects for beginners.
 - [Credits](#credits)
 
 ## Getting Started
-
 If you're completely new to programming, you may want to look into a tutorial. Before starting, you should already know the basics of programming such as variables, loops, dictionaries, and how to define functions, as well as how to run programs on your own machine.
 
 Each project idea has a basic goal for you to achieve, as well as subgoals that require a bit more thought, but help make your program more interesting. The overall intent for this repository is to serve as a learning resource for everyone and to help transition learners from a beginning level to an intermediate level. In addition, learners are encouraged to contribute their solutions to this repository and thereby learn the basics of Git.
@@ -20,8 +19,8 @@ Almost all projects can be completed in any language, but some were specifically
 
 Remember, if you don't know how to do something, Google is your friend.
 
-## Project List 
-*Projects are somewhat ordered by increasing difficulty.*
+## Project List
+_Projects are somewhat ordered by increasing difficulty._
 
 1. [99 Bottles](#99-bottles)
 2. [Magic 8 Ball](#magic-8-ball)
@@ -78,7 +77,6 @@ Bonus:
 
 ### Pythagorean Triples Checker
 If you do not know how basic right triangles work, read [this article on Wikipedia](https://en.wikipedia.org/wiki/Pythagorean_theorem).
-
 - Allows the user to input the sides of any triangle in any order.
 - Return whether the triangle is a Pythagorean Triple or not.
 - Loop the program so the user can use it more than once without having to restart the program.
@@ -96,6 +94,7 @@ Subgoals:
 
 ### Coin Estimator By Weight
 When some people receive change after shopping, they put it into a container and let it add up over time. Once they fill up the container, they'll roll them up in coin wrappers which can then be traded in at a bank for what they are worth.
+
 - Allow the user to input the total weight of each type of coin they have (pennies, nickels, dimes, and quarters).
 - Print out how many of each type of coin wrapper they would need, how many coins they have, and the estimated total value of all their money.
 
@@ -137,7 +136,7 @@ Create a simple game where the computer randomly selects a number between 1 and 
 Subgoals:
 - Add an introductory message that explains to the user how to play your game.
 - In addition to the congratulatory message at the end of the game, also print out how many guesses were taken before the user arrived at the correct answer.
-- Allow the user to decide if they want to play again (without having to restart the program).
+- At the end of the game, allow the user to decide if they want to play again (without having to restart the program).
 
 ### Multiplication Table
 Create a program that prints out a multiplication table for the numbers 1 through 9.
@@ -150,6 +149,7 @@ Subgoals:
 
 ### Fibonacci Sequence
 If you do not know about the Fibonacci Sequence, read about it [here](https://en.wikipedia.org/wiki/Fibonacci_number).
+
 - Define a function that allows the user to find the value of the nth term in the sequence.
 - To make sure you've written your function correctly, test the first 10 numbers of the sequence.
 - You can assume either that the first two terms are 0 and 1 or that they are both 1.
@@ -254,8 +254,133 @@ Create a program that allows the user to choose a time and date, and then prints
 Subgoals:
 - If the selected time has already passed, have the program tell the user to start over.
 - If your program asks for the year, month, day, hour, etc. separately, allow the user to be able to type in either the month name or its number.
-- TIP: Making use of built in modules such as time and datetime can change this project from a nightmare into a much simpler task.
+- TIP: Making use of built-in modules such as time and datetime can change this project from a nightmare into a much simpler task.
 
 ### Turn Based Pokemon Style Game
 Write a simple game that allows the user and the computer to take turns selecting moves to use against each other.
 - Both the computer and the player should start out at the same amount of health (such as 100), and should be able to choose between the three moves:
+  1. The first move should do moderate damage and has a small range (such as 18-25).
+  2. The second move should have a large range of damage and can deal high or low damage (such as 10-35).
+  3. The third move should heal whoever casts it a moderate amount, similar to the first move.
+- After each move, a message should be printed out that tells the user what just happened, and how much health the user and computer have. Once the user or the computer's health reaches 0, the game should end.
+
+Subgoals:
+- When someone is defeated, make sure the game prints out that their health has reached 0, and not a negative number.
+- When the computer's health reaches a set amount (such as 35%), increase its chance to cast heal.
+- Give each move a name.
+
+### A Variation of 21
+If you do not know how 21 (AKA Blackjack) is played, reading the first couple of paragraphs of [this Wikipedia article](https://en.wikipedia.org/wiki/Blackjack) may be beneficial.
+
+In this project, you will make a game similar to Blackjack. In this version:
+- There is only one player.
+- There are two types of scores: the game score and the round score.
+- The game score will begin at 100, and the game will last for five rounds.
+- At the beginning of the round, the player is given two random cards from a deck and they will be added together to make the player's round score.
+- From here, the player has two options - draw another card to try to get their round score closer to 21, or they can end the round.
+- The player can draw as many cards as they want until they end the round or their round score exceeds 21.
+- At the end of the round, the difference between 21 and the round score is subtracted from the game score, and then the next round begins. After the five rounds, the player is given their total score and the game is over.
+
+Other Information About The Game:
+- Aces are only worth 1.
+- If a player busts, 21 is subtracted from their total score.
+- All face cards are worth 10.
+- So the point of your program is to allow the user to play the game described above.
+
+Subgoals:
+- At the beginning of each round, print the round number (1 to 5).
+- Since this is a text-based game, tell the user what is happening. For example, tell him/her when he/she draws a card, the name of the card, when they bust, etc.
+- Create a ranking system at the end of the game and tell the user their rank. For example, if the player finishes with 50-59 points they get an F, 60-69 is a D, 70-79 is a C, 80-89 is a B, and 90-100 is an A.
+- At the end of each round, print out the user's total score.
+- This may be the hardest part of the project, depending on how you wrote it. Make sure the deck has 4 of each type of card, and then remove cards as they are drawn. At the end of each round, make the deck have all of the cards again.
+
+### Compare Recent reddit Karma
+Create a program that gets information about two different users, and then sees whose most recent post received the most karma.
+- The program should then print out which user received more karma, and what the difference was.
+- This is a pretty open project, so I encourage you to take it further by adding more features if you find it interesting.
+
+Subgoals:
+- Allow the user to put in the name of two different users when the program first begins.
+- If one of the names of the users does not exist (because of a spelling error), print out a message saying so.
+- Allow the user to keep comparing other users until the program is closed.
+- Display the amount of upvotes and downvotes each user received for their posts.
+
+### Watch for New TIL Facts
+Create a program that receives data from the /r/todayilearned subreddit, and looks for new facts that have been posted.
+- Each time the program comes across a new fact, the fact should be printed into the command line. However, phrases like "TIL ", "TIL that", etc should be removed so the only thing that is printed is the fact.
+
+There are a couple things to note about this:
+- According to Reddit's API Access Rules Page, the API pages are only updated once every thirty seconds, so you'll have to have your code pause for at least thirty seconds before it tries to find more posts.
+- If for some reason you decide to try to get data sooner than every thirty seconds, make sure to not send more than thirty requests per minute. That is the maximum you are allowed to do.
+
+Subgoals:
+- Print the link to the source of the fact too.
+- Try to further clean up the fact by adding punctuation to the end if it is missing, capitalize the first word, etc.
+- Write the facts to a separate text file so you end up with a giant compilation of random facts.
+- Create a bot that posts the facts to Twitter.
+
+### Random Wikipedia Article
+Create a program that pulls titles from the official Wikipedia API and then asks the user one by one if he or she would like to read about that article.
+
+Example:
+- If the first title is "Reddit", then the program should ask something along the lines of "Would you like to read about Reddit?" If the user says yes, then the program should open up the article for the user to read.
+
+Subgoals:
+- Do something about the possibility of unicode appearing in the title. Whether you want your program to simply filter out these articles or you want to actually turn the codes into readable characters, that's up to you.
+- Make the program pause once the user has selected an article to read, and allow him or her to continue browsing different article titles once finished reading.
+- Allow the user to simply press ENTER to be asked about a new article.
+
+### What's the Weather?
+Create a program that pulls data from OpenWeatherMap.org and prints out information about the current weather, such as the high, the low, and the amount of rain for wherever you live.
+
+Subgoals:
+- Print out data for the next 5-7 days so you have a 5 day/week long forecast.
+- Print the data to another file that you can open up and view at, instead of viewing the information in the command line.
+- If you know HTML, write a file that you can print information to so that your project is more interesting.
+
+Tips:
+- APIs that are in JSON are essentially lists and dictionaries. Remember that to reference something in a list, you must refer to it by what number element it is in the list, and to reference a key in a dictionary, you must refer to it by its name.
+- Don't like Celsius? Add `&units=imperial` to the end of the URL of the API to receive your data in Fahrenheit.
+
+### Sierpinski Triangle
+The Sierpinski triangle (also with the original orthography Sierpinski), also called the Sierpinski gasket or the Sierpinski Sieve, is a fractal and attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles.
+
+Task in hand:
+- Create and visualize a fractal generator that forms a standard Sierpinski triangle.
+- Perform this using recursive calls.
+
+Subgoals:
+- Also accept depth for which the fractal should be generated.
+
+### Two Numbers
+Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+### Chickens and Rabbits
+Write a program to solve a classic ancient Chinese puzzle:
+We count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?
+
+Hint: Use a for loop to iterate all possible solutions.
+
+## Solutions
+lutherannn - https://github.com/lutherannn/beginner-projects-solutions
+
+## Contributing
+Contributing to this repository in any way is encouraged.
+
+Some ways to contribute are:
+- Adding solutions
+- Adding new projects to the project list
+- Editing the README
+
+### Contributing Solutions
+1. Create a new repository called beginner-project-solutions (or some variation thereof).
+2. Add at least one project solution to that repository.
+3. Add a link to your new repository at the end of the list in the Solutions section of this README with your GitHub username.
+
+## Credits
+Most of these project ideas were originally created on reddit in an old subreddit [here](https://www.reddit.com/r/beginnerprojects/). The projects in this repository that are not in that list have been added by this project's contributors.
