@@ -63,17 +63,23 @@ def logic(player_hand):
 def menu_screen():
     global menu_window
     menu_window = tk.Tk()
+    menu_window.geometry("300x200")  # Width x Height
+    # menu_window.resizable(False, False)  # Fixed size
+    menu_window.eval('tk::PlaceWindow . center')  # Center on screen
+    menu_window.grid_rowconfigure(0, weight=1)
+    menu_window.grid_rowconfigure(3, weight=1)
+    menu_window.grid_columnconfigure((0,1), weight=1)
     menu_window.title("Rock Paper Scissors")
     label = tk.Label(menu_window, text="Choose Rounds")
     button3 = tk.Button(menu_window, text="3", command=lambda: round_choice(3), width=10)
     button5 = tk.Button(menu_window, text="5", command=lambda: round_choice(5), width=10)
     button7 = tk.Button(menu_window, text="7", command=lambda: round_choice(7), width=10)
     button9 = tk.Button(menu_window, text="9", command=lambda: round_choice(9), width=10)
-    label.grid(row=0, column=0, columnspan=2)
-    button3.grid(row=1, column=0)
-    button5.grid(row=1, column=1)
-    button7.grid(row=2, column=0)
-    button9.grid(row=2, column=1)
+    label.grid(row=0, column=0, columnspan=2, pady=10)
+    button3.grid(row=1, column=0, padx=10, pady=5)
+    button5.grid(row=1, column=1, padx=10, pady=5)
+    button7.grid(row=2, column=0, padx=10, pady=5)
+    button9.grid(row=2, column=1, padx=10, pady=5)
     menu_window.mainloop()
 
 def game_screen():
@@ -81,7 +87,12 @@ def game_screen():
     global round_winner, score, current_round_label, restart
     
     game_window = tk.Tk()
-    game_window.title("Rock Paper Scissors")
+    game_window.geometry("300x200") # Width x Height
+    # game_window.resizable(False, False)
+    game_window.eval('tk::PlaceWindow . center') # Fixed size
+    game_window.title("Rock Paper Scissors") # Center on screen
+    game_window.grid_rowconfigure((0,1,2,3,4,5), weight=1)
+    game_window.grid_columnconfigure((0,1,2), weight=1)
     
     label = tk.Label(game_window, text="Choose Hand")
     rock = tk.Button(game_window, text="Rock", command=lambda: logic("Rock"), width=12)
@@ -96,17 +107,17 @@ def game_screen():
     player_hand_ = tk.Label(game_window, text="")
     computer_hand_ = tk.Label(game_window, text="")
 
-    label.grid(row=0, column=0, columnspan=3)
-    rock.grid(row=1, column=0)
-    paper.grid(row=1, column=1)
-    scissors.grid(row=1, column=2)
-    player_label.grid(row=2, column=0)
-    round_winner.grid(row=2, column=1)
-    computer_label.grid(row=2, column=2)
-    player_hand_.grid(row=3, column=0)
-    computer_hand_.grid(row=3, column=2)
-    score.grid(row=4, column=1)
-    current_round_label.grid(row=5, column=1)
+    label.grid(row=0, column=0, columnspan=3, pady=10)
+    rock.grid(row=1, column=0, padx=5, pady=5)
+    paper.grid(row=1, column=1, padx=5, pady=5)
+    scissors.grid(row=1, column=2, padx=5, pady=5)
+    player_label.grid(row=2, column=0, padx=5, pady=5)
+    round_winner.grid(row=2, column=1, padx=5, pady=5)
+    computer_label.grid(row=2, column=2, padx=5, pady=5)
+    player_hand_.grid(row=3, column=0, padx=5, pady=5)
+    computer_hand_.grid(row=3, column=2, padx=5, pady=5)
+    score.grid(row=4, column=1, padx=5, pady=5)
+    current_round_label.grid(row=5, column=1, padx=5, pady=5)
     
     game_window.mainloop()
 
